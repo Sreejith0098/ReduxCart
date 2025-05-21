@@ -1,9 +1,27 @@
-import React from 'react'
+import React from "react";
+import Header from "../components/Header";
+import { Link } from "react-router-dom";
+import Footer from "../components/Footer";
 
 const Home = () => {
   return (
-    <div>Home</div>
-  )
-}
+    <>
+      <Header insideHome={true} />
+      <div className="grid grid-cols-4 gap-3 mt-5 p-2">
+        <div className="border rounded p-2 shadow text-center">
+          <img
+            width={"100%"}
+            src="https://cdn.dummyjson.com/product-images/beauty/eyeshadow-palette-with-mirror/thumbnail.webp"
+            alt=""
+          />
+          <h3 className="font-bold text-xl mb-3">product name</h3>
+          <Link to={"/id/view"} className="bg-yellow-500 p-1 rounded border ">
+            View More
+          </Link>
+        </div>
+      </div>
+      </>
+  );
+};
 
-export default Home
+export default Home;
