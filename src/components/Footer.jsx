@@ -6,7 +6,7 @@ const Footer = () => {
     <div>
       <div
         style={{ paddingLeft: "65px" }}
-        className="bg-purple-500 w-full grid grid-cols-4 text-white  pt-6"
+        className="bg-purple-500 w-full grid grid-cols-4 text-white  pt-6 pb-3"
       >
         <div className="col">
           <i
@@ -55,7 +55,7 @@ const Footer = () => {
           </h4>
           <div className="flex">
             <input className="bg-white rounded block mb-2 text-black p-1 text-center" type="text" placeholder="Enter your email here"/>{" "}
-            <span className="font-bold mt-1">&rarr;</span>
+            <span  className=" font-bold mt-1">&rarr;</span>
           </div>
           <i class="fa-brands fa-twitter"></i>
           <i class="fa-brands ms-5 fa-facebook"></i>
@@ -65,8 +65,7 @@ const Footer = () => {
         </div>
       </div>
       <p
-        className="pt-6 bg-purple-500 w-full text-white"
-        style={{ paddingLeft: "490px" }}
+        className="pt-6 pb-6 bg-purple-500 w-full text-white text-center"
       >
         Copy right <span style={{fontSize:'24px' ,fontWeight:'bold'}}>&copy;</span> january 2025 batch,Daily Cart,Build with React Redux.
       </p>

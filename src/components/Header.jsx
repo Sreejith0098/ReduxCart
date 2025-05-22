@@ -11,8 +11,8 @@ const Header = ({insideHome}) => {
         {insideHome?(
         <li className="inline-block mx-5">
           <input
-            className="bg-white border rounded text-center p-1 "
-            type="'text'"
+            className="bg-white border w-84 rounded text-center p-1 "
+            type="'text'" 
             placeholder="search products here"
           />{" "}
         </li>
@@ -20,13 +20,13 @@ const Header = ({insideHome}) => {
         <li className="inline-block mx">
           <Link className="text-white text-2xl font-bold " to={"/wishlist"}>
             <i className="fa-solid fa-heart text-red-600"></i>{" "}
-            whishlist <span className="bg-black p-1 rounded-4xl">0</span>
+            wishlist <span className=" p-1 rounded-4xl">0</span>
           </Link>
         </li>
         <li className="inline-block mx">
           <Link className="text-white text-2xl font-bold ">
-            <i className="fa-solid fa-cart-shopping text-green-400"></i>{" "}
-            Cart <span className="bg-black p-1 rounded-4xl" >0</span>
+            <i className="fa-solid fa-cart-shopping text-orange-600"></i>{" "}
+            Cart <span className=" p-1 rounded-4xl" >0</span>
           </Link>
         </li>
         
