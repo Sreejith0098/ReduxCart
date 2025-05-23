@@ -57,11 +57,11 @@ const Footer = () => {
             <input className="bg-white rounded block mb-2 text-black p-1 text-center" type="text" placeholder="Enter your email here"/>{" "}
             <span  className=" font-bold mt-1">&rarr;</span>
           </div>
-          <i class="fa-brands fa-twitter"></i>
-          <i class="fa-brands ms-5 fa-facebook"></i>
-          <i class="fa-brands ms-5 fa-instagram"></i>
-          <i class="fa-brands ms-5 fa-github"></i>
-          <i class="fa-solid ms-5 fa-phone"></i>{" "}
+          <i className="fa-brands fa-twitter"></i>
+          <i className="fa-brands ms-5 fa-facebook"></i>
+          <i className="fa-brands ms-5 fa-instagram"></i>
+          <i className="fa-brands ms-5 fa-github"></i>
+          <i className="fa-solid ms-5 fa-phone"></i>{" "}
         </div>
       </div>
       <p
