@@ -33,7 +33,7 @@ const Home = () => {
                     <img width={"100%"} src={eachProduct.thumbnail} alt="" />
                     <h3 className="font-bold text-2xl mb-3">{eachProduct.title}</h3>
                     <Link
-                      to={"/id/view"}
+                      to={`/${eachProduct.id}/view`}
                       className="bg-black text-white p-1 rounded border "
                     >
                       View More
