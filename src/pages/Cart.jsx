@@ -1,13 +1,19 @@
 import React from "react";
 import Header from "../components/Header";
+import { useSelector } from "react-redux";
 
 const Cart = () => {
+
+    const {cartItems} =useSelector((state)=>state.cartReducer)
   return (
     <>
       <Header />
       <div className="mt-4">
         <h1 className="card-summery text-4xl text-blue-700 font-bold ps-3">Card Summary</h1>
-        <div className="grid grid-cols-3 gap-3 mt-3  m-3">
+
+        {
+            cartItems?.length>0?(
+<div className="grid grid-cols-3 gap-3 mt-3  m-3">
           <div className="col-span-2 border shadow p-3   ">
             <table className="table-auto w-full ">
               <thead>
@@ -21,27 +27,32 @@ const Cart = () => {
                 </tr>
               </thead>
               <tbody>
-                <tr  >
-                  <td>1</td>
-                  <td>Name</td>
-                  <td>
-                    <img style={{width:'80px'}} src="https://cdn.dummyjson.com/product-images/beauty/eyeshadow-palette-with-mirror/thumbnail.webp" alt="" />
-                  </td>
-                  <td>
-                    {" "}
-                    <div className="flex">
-                      <button className="font-bold">-</button>
-                      <input value={0} className="border-2 w-10 text-center rounded" type="text" />
-                      <button className="font-bold">+</button>
-                    </div>{" "}
-                  </td>
-                  <td>1000</td>
-                  <td>
-                    <button>
-                      <i class="fa-solid text-red-500 fa-trash"></i>
-                    </button>
-                  </td>
-                </tr>
+                {
+                    cartItems?.map((eachItem,index)=>(
+                        <tr  >
+                        <td>{index+1}</td>
+                        <td>{eachItem.title}</td>
+                        <td>
+                          <img style={{width:'80px'}} src={eachItem.thumbnail} alt="" />
+                        </td>
+                        <td>
+                          {" "}
+                          <div className="flex">
+                            <button className="font-bold">-</button>
+                            <input value={eachItem.quantity} className="border-2 w-10 text-center rounded" type="text" />
+                            <button className="font-bold">+</button>
+                          </div>{" "}
+                        </td>
+                        <td>{eachItem.totalPrice}</td>
+                        <td>
+                          <button>
+                            <i class="fa-solid text-red-500 fa-trash"></i>
+                          </button>
+                        </td>
+                      </tr>
+                    ))
+                }
+               
               </tbody>
             </table>
             <div className="float-right">
@@ -61,6 +72,12 @@ const Cart = () => {
             </button>
           </div>
         </div>
+            ):(   <div style={{marginLeft:'400px'}} className="">
+                <h1 className="text-center text-5xl">no items found in wishlist</h1>
+                <img src="https://assets-v2.lottiefiles.com/a/76623d28-4e37-11ef-87f5-03e9496a5cb5/PR2PeUMHrd.gif" alt="" />
+            </div>)
+        }
+        
       </div>
     </>
   );

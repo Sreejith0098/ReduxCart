@@ -23,6 +23,7 @@ const productSlice = createSlice({
   name: "products",
   initialState: {
     allProducts: [],
+    dummyproducts:[],
     loading: false,
     error: "",
     singleProduct:[],
@@ -30,17 +31,24 @@ const productSlice = createSlice({
     viewError:''
 
   },
+ 
+//   })
   reducers: {
     //synchronous functions
+    searchProduct:(state,searchKeyFromComp)=>{
+        state.allProducts=state.dummyproducts.filter((eachProduct)=>eachProduct.title.toLowerCase().includes(searchKeyFromComp.payload.toLowerCase()))
+    }
   },
   extraReducers: (builder) => {
     builder.addCase(fetchAllProducts.fulfilled, (state, apiResult) => {
       state.allProducts = apiResult.payload;
+      state.dummyproducts = apiResult.payload;
       state.loading = false;
       state.error = "";
     });
     builder.addCase(fetchAllProducts.pending, (state, apiResult) => {
       state.allProducts = [];
+      state.dummyproducts =[],
       state.loading = true;
       state.error = "";
     });
@@ -68,7 +76,7 @@ const productSlice = createSlice({
       });
 
 
-
   },
 });
+export const {searchProduct} = productSlice.actions
 export default productSlice.reducer;
