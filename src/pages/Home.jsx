@@ -14,7 +14,7 @@ const Home = () => {
 
   return (
     <>
-      <Header insideHome={true} />
+      <Header  insideHome={true} />
       {loading ? (
         <div>
           {" "}

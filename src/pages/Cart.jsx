@@ -41,7 +41,7 @@ const Cart = () => {
     <>
       <Header />
       <div className="mt-4">
-        <h1 className="card-summery text-5xl mt-6 text-center text-blue-700 font-bold ps-3">
+        <h1 className="card-summery text-5xl mt-10 text-center text-blue-700 font-bold ps-3">
           Items not found in the Cart
         </h1>
 
@@ -105,7 +105,7 @@ const Cart = () => {
               </table>
               <div className="float-right">
                 <button
-                  onClick={()=>dispatch(emptyCart())}
+                  onClick={() => dispatch(emptyCart())}
                   className="bg-red-500 border font-bold rounded text-white p-2 me-2"
                 >
                   Empty cart

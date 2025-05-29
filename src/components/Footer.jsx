@@ -54,8 +54,12 @@ const Footer = () => {
             Contact Us
           </h4>
           <div className="flex">
-            <input className="bg-white rounded block mb-2 text-black p-1 text-center" type="text" placeholder="Enter your email here"/>{" "}
-            <span  className=" font-bold mt-1">&rarr;</span>
+            <input
+              className="bg-white rounded block mb-2 text-black p-1 text-center"
+              type="text"
+              placeholder="Enter your email here"
+            />{" "}
+            <span className=" font-bold mt-1">&rarr;</span>
           </div>
           <i className="fa-brands fa-twitter"></i>
           <i className="fa-brands ms-5 fa-facebook"></i>
@@ -64,10 +68,10 @@ const Footer = () => {
           <i className="fa-solid ms-5 fa-phone"></i>{" "}
         </div>
       </div>
-      <p
-        className="pt-6 pb-6 bg-purple-500 w-full text-white text-center"
-      >
-        Copy right <span style={{fontSize:'24px' ,fontWeight:'bold'}}>&copy;</span> january 2025 batch,Daily Cart,Build with React Redux.
+      <p className="pt-6 pb-6 bg-purple-500 w-full text-white text-center">
+        Copy right{" "}
+        <span style={{ fontSize: "24px", fontWeight: "bold" }}>&copy;</span>{" "}
+        january 2025 batch,Daily Cart,Build with React Redux.
       </p>
     </div>
   );

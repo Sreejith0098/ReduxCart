@@ -43,13 +43,16 @@ const cartSlice = createSlice({
         state.cartItems = [...remainingProduct, existingProduct];
       }
     },
-   removeCartItem:(state,idFromComp)=>{
-    state.cartItems = state.cartItems.filter((eachItem)=>eachItem.id!=idFromComp.payload)
-   },
-   emptyCart:(state,idFromComp)=>{
-    state.cartItems = []
-   }
+    removeCartItem: (state, idFromComp) => {
+      state.cartItems = state.cartItems.filter(
+        (eachItem) => eachItem.id != idFromComp.payload
+      );
+    },
+    emptyCart: (state, idFromComp) => {
+      state.cartItems = [];
+    },
   },
 });
-export const { addCart,decrementCartItem,removeCartItem,emptyCart } = cartSlice.actions;
+export const { addCart, decrementCartItem, removeCartItem, emptyCart } =
+  cartSlice.actions;
 export default cartSlice.reducer;

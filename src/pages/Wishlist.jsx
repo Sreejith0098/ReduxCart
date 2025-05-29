@@ -41,7 +41,7 @@ const Wishlist = () => {
         </div>
       ) : (
         <div style={{marginLeft:'430px'}} className="">
-            <h1 className=" ms-18 text-blue-600 mt-7 text-5xl">no items found in wishlist</h1>
+            <h1 className=" ms-18 text-blue-700 font-bold mt-11 text-5xl"> No items found in wishlist</h1>
             <img className="w-xl" src="https://assets-v2.lottiefiles.com/a/76623d28-4e37-11ef-87f5-03e9496a5cb5/PR2PeUMHrd.gif" alt="" />
         </div>
       )}
